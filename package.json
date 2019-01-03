@@ -1,0 +1,18 @@
+{
+  "license": "MIT",
+  "name": "hello-world",
+  "version": "1.0.0",
+  "description": "Node.js on Docker",
+  "author": "Todd Thomas <todd.dsm@gmail.com>",
+  "main": "hello.js",
+  "scripts": {
+    "start": "node hello.js"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/todd-dsm/hello-node"
+  }
+}
