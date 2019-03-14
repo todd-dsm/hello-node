@@ -12,20 +12,20 @@ ENV USER 'root'
 ###----------------------------------------------------------------------------
 # Update the apk cache, then upgrade all packages on the system
 RUN apk update && apk upgrade
+# Add utilities
+RUN apk add ca-certificates
 
 
 ###----------------------------------------------------------------------------
 ### DEV / Humans
 ###----------------------------------------------------------------------------
 # Add some conveniences
-ADD system/bashrc "/$USER/.bashrc"
-ADD system/vim-sensible/plugin/sensible.vim "/$USER/.vimrc"
-
-# Add utilities
-RUN apk add bash vim coreutils tzdata curl ca-certificates
+#ADD system/bashrc "/$USER/.bashrc"
+#ADD system/vim-sensible/plugin/sensible.vim "/$USER/.vimrc"
 
 # Add Dev utilities
-RUN apk add bash-completion bash-doc coreutils binutils findutils tree
+RUN apk add bash vim coreutils tzdata curl bash-completion bash-doc coreutils \
+  binutils findutils tree
 
 # Default SHELL: bash; we're not animals
 RUN sed -i "/^$USER/ s/ash/bash/1" /etc/passwd
