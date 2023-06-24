@@ -1,0 +1,24 @@
+{
+  "name": "hello-node",
+  "version": "1.0.0",
+  "description": "a nodejs Hello World app for pipeline testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test NODE_NO_WARNINGS=1 mocha",
+    "start": "nodemon ./app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "-": "^0.0.1",
+    "chai": "^4.3.7",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mocha": "^10.2.0",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.22",
+    "save-dev": "^0.0.1-security",
+    "supertest": "^6.3.3"
+  }
+}
