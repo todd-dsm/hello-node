@@ -1,12 +1,13 @@
 //posts.spec.js
 
 const request = require('supertest')
-const app = require('../app') // the express server
 const expect = require('chai').expect
+
+const host = 'http://localhost:3000'
 
 describe('GET /posts endpoint', () => {
   it('GET /posts endpoint successfully returns response', () => {
-    return request(app)
+    return request(host)
       .get('/posts')
       .then((response) => {
         expect(response.statusCode).to.equal(200)
